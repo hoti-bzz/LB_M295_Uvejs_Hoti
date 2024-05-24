@@ -2,6 +2,7 @@ package com.uvejs.lb_m295_uvejs_hoti.models;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.DecimalMin;
+import jakarta.validation.constraints.*;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -14,12 +15,15 @@ public class Book {
     @Column(name = "id_book")
     private int idBook;
 
+    @Size(min = 2, max = 255, message = "Description length must be between 2 and 50 characters")
     @Column(name = "bookdescription")
     private String bookDescription;
 
     @Column(name = "title")
+    @Pattern(regexp = "^[a-zA-Z0-9]*$", message = "Title must contain only letters and numbers")
     private String title;
 
+    @DecimalMin(value = "0.01", message = "Price must be greater than or equal to 0.01")
     @Column(name = "price")
     private BigDecimal price;
 

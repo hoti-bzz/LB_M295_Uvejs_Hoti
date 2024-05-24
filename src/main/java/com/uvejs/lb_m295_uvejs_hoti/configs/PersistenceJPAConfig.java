@@ -1,4 +1,4 @@
-package com.uvejs.lb_m295_uvejs_hoti;
+package com.uvejs.lb_m295_uvejs_hoti.configs;
 
 import java.util.Properties;
 
@@ -18,7 +18,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
 @EnableTransactionManagement
-@EnableJpaRepositories(basePackages = "com.uvejs.lb_m295_uvejs_hoti.repository")
+@EnableJpaRepositories(basePackages = "com.uvejs.lb_m295_uvejs_hoti.repositories")
 public class PersistenceJPAConfig {
     @Bean
     public LocalContainerEntityManagerFactoryBean entityManagerFactory() {

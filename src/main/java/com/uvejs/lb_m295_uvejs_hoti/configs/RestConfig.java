@@ -1,4 +1,5 @@
-package com.uvejs.lb_m295_uvejs_hoti;
+package com.uvejs.lb_m295_uvejs_hoti.configs;
+import com.uvejs.lb_m295_uvejs_hoti.securities.AuthenticationFilter;
 import com.uvejs.lb_m295_uvejs_hoti.services.BookController;
 import jakarta.ws.rs.ApplicationPath;
 import jakarta.ws.rs.core.Application;
@@ -9,6 +10,6 @@ import java.util.Set;
 public class RestConfig extends Application {
     public Set<Class<?>> getClasses() {
         return new HashSet<Class<?>>(
-                List.of(BookController.class));
+                List.of(BookController.class, AuthenticationFilter.class));
     }
 }
