@@ -8,26 +8,28 @@ public class Genre {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id_genre")
-    private Integer idgenre;
+    private int idGenre;
 
-    @Column(name = "name")
+    @Column(name = "genrename")
     private String name;
 
-    public Genre(Integer idgenre, String name) {
-        this.idgenre = idgenre;
-        this.name = name;
-    }
+
 
     public Genre() {
 
     }
 
-    public Integer getIdgenre() {
-        return idgenre;
+    public Genre(int idGenre, String name) {
+        this.idGenre = idGenre;
+        this.name = name;
     }
 
-    public void setIdgenre(Integer idgenre) {
-        this.idgenre = idgenre;
+    public int getIdGenre() {
+        return idGenre;
+    }
+
+    public void setIdGenre(int idGenre) {
+        this.idGenre = idGenre;
     }
 
     public String getName() {
